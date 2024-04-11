@@ -1,10 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8"> <!-- character encoding for doc -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For responsive design -->
     <title>First Meeting Minutes </title>
-    <!-- trying a cool soccer ball favicon-->
+    <!--Trying a cool soccer ball favicon-->
     <link rel="icon" type="image/png" href="favicon_io/favicon-32x32.png">
   </head>
   <body>
+    <!-- Meeting Title -->
+    <header>
+      <h1>First Brainstorm In The Works!</h1>
+    </header>
+
+    <!-- Subtitle Meeting Section/Topic -->
+    <section>
+      <h2>Brainstorming Session 1</h2>
+      <!--Subtitle of the Date -->
+      <p><strong>Date:</strong> April 10, 2024</p>
+      <!-- Attendance List -->
+      <p><strong>Attendees:</strong> Just Jeremy apparently </p>
+    </section>
+
+    <section>
+      <h3>Agenda</h3>
+      <ol>
+        <li>Introdudce ourselves to one another should be easy since its just one of you </li>
+        <li>Brainstorm ideas for the project </li>
+        <li>Distribute tasks amongst yourself</li>
+      </ol>
+    </section>
+
+     <!-- Unfinished Business from Last Meeting -->
+     <section>
+      <h3>Unfinished Business</h3>
+      <p>Last meeting involved firing people so this meeting we will also work on hiring people </p>
+    </section>
+
+     <!-- New Business -->
+    <section>
+      <h3>New Business</h3>
+      <p>Ways we can make more $$$$</p>
+    </section>
+
+     <!-- Miscellaneous Comments/Questions/Concerns -->
+     <section>
+      <h3>Comments, Questions, Concerns</h3>
+      <ul>
+        <li>Jeremy feels a bit alone</li>
+        <li>Jeremy is thinking about quitting</li>
+      </ul>
+    </section>
+    
+    <!-- Diagrams/Pictures Presented -->
+    <section>
+      <h3>Diagrams and Whiteboard Sessions</h3>
+      <img src="screenshots/hangman.jpeg" alt="Whiteboard diagram from the meeting">
+    </section>
+
+    <!-- Interactive elements -->
+    <details>
+      <summary>More about this meeting</summary>
+      <p>Post meeting summary because Jeremy had to cut things short </p>
+    </details>
+
+     <!-- Audio Recording -->
+  <section>
+    <h3>Audio Recording of the Lunch Break</h3>
+    <audio controls>
+      <source src="audio and video/IMG_3430.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <!-- Video Recording -->
+  <section>
+    <h3>Video Recording of the Lunch Break</h3>
+    <video controls>
+      <source src="audio and video/IMG_3430.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+     <!-- Form for Feedback or Other Purpose -->
+     <form>
+      <fieldset>
+        <legend>Feedback Form</legend>
+        <!-- Text Input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name">
+        <!-- Radio Input -->
+        <p>Are you enjoying the solo meetings?</p>
+        <label for="enjoy-yes">Yes</label>
+        <input type="radio" id="enjoy-yes" name="enjoy" value="yes">
+        <label for="enjoy-no">No</label>
+        <input type="radio" id="enjoy-no" name="enjoy" value="no">
+        <!-- Checkbox Input -->
+        <label for="attend-next">Attend next meeting?</label>
+        <input type="checkbox" id="attend-next" name="attend_next">
+        <!-- Date Input -->
+        <label for="next-meeting">Next meeting date:</label>
+        <input type="date" id="next-meeting" name="next_meeting">
+        <!-- Textarea -->
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" placeholder="Your comments"></textarea>
+        <!-- Button to submit form -->
+        <button type="submit">Submit Feedback</button>
+      </fieldset>
+    </form>
+  
   </body>
 </html>
