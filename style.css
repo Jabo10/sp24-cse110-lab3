@@ -1,51 +1,57 @@
-/* defining css variables i can reuse at root for easy management */
+/* CSS Variables at root for easy theme management */
 :root {
-  --primary-color: #009945; /* header text color*/
-  --secondary-color: hsl(76, 71%, 48%); /* section box colors */
-  --background-color: #f4f4f9;
-  --text-color: #333;
-  --header-background: rgba(1, 5, 9, 0.8); 
+  --primary-color: rgb(0, 153, 69); /* Using RGB for green */
+  --secondary-color: hsla(76, 71%, 48%, 0.9); /* Using HSLA for semi-transparent green */
+  --background-color: #f4f4f9; /* Hex code for light grayish background */
+  --text-color: #333; /* Hex code for dark gray text */
+  --header-background: rgba(1, 5, 9, 0.8); /* Using RGBA for semi-transparent dark background */
 }
 
-/* Apply basic text and colors for readability */
+/* Applying basic colors and styles for readability */
 body {
-  font-family: system-ui;
-  background-color: var(--background-color);/* keeping white */
-  color: var(--text-color); /*keeping blackish*/
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color); /* Applying the light gray background */
+  color: var(--text-color); /* Applying the dark gray text color */
 }
 
-/* Header Styling */
+/* Header styling with semi-transparent background */
 header {
   background-color: var(--header-background);
-  color: #ffffff;
+  color: #FFFFFF; /* Using a color name for white */
   padding: 20px;
   text-align: center;
 }
 
+/* Styling headers within sections */
 h1, h2, h3 {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Using the RGB green defined above */
 }
 
-/* each section */
+/* Section styling using a border color from a CSS variable */
 section {
-  background-color: var(--background-color);/* keeping white */
-  border: 2px solid var(--secondary-color);
+  background-color: #FFFFFF; /* Using hex code for white */
+  border: 2px solid var(--secondary-color); /* Applying the semi-transparent HSLA green */
   margin: 20px;
   padding: 15px;
 }
 
-/*  HSLA for semi-transparency */
+/* Paragraph styling with HSLA for semi-transparency */
 p {
-  color: hsla(0, 0%, 0%, 0.8); /* black with 80% opacity */
+  color: hsla(0, 0%, 0%, 0.8); /* Black with 80% opacity, allowing some background to show through */
 }
 
-/* Interactive elements with */
+/* Interactive button styling with transition effects */
 button {
-  background-color: var(--secondary-color);
-  color: #090909; /*word in button color */
-  transition: background-color 0.3s ease; /* tansition to hover effect*/
+  background-color: var(--secondary-color); /* Applying the semi-transparent HSLA green */
+  color: #090909; /* Hex code for almost black text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
-/* color changes on hover */
+
+/* Button hover effect to darken the background */
 button:hover {
-  background-color: darken(var(--secondary-color), 30%);
+  background-color: color-mix(in srgb, var(--secondary-color) 50%, black 50%); /* Mixing current background with black */
 }
