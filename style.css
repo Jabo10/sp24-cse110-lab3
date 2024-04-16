@@ -1,1 +1,51 @@
+/* defining css variables i can reuse at root for easy management */
+:root {
+  --primary-color: #009945; /* header text color*/
+  --secondary-color: hsl(76, 71%, 48%); /* section box colors */
+  --background-color: #f4f4f9;
+  --text-color: #333;
+  --header-background: rgba(1, 5, 9, 0.8); 
+}
 
+/* Apply basic text and colors for readability */
+body {
+  font-family: system-ui;
+  background-color: var(--background-color);/* keeping white */
+  color: var(--text-color); /*keeping blackish*/
+}
+
+/* Header Styling */
+header {
+  background-color: var(--header-background);
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+}
+
+/* each section */
+section {
+  background-color: var(--background-color);/* keeping white */
+  border: 2px solid var(--secondary-color);
+  margin: 20px;
+  padding: 15px;
+}
+
+/*  HSLA for semi-transparency */
+p {
+  color: hsla(0, 0%, 0%, 0.8); /* black with 80% opacity */
+}
+
+/* Interactive elements with */
+button {
+  background-color: var(--secondary-color);
+  color: #090909; /*word in button color */
+  transition: background-color 0.3s ease; /* tansition to hover effect*/
+}
+/* color changes on hover */
+button:hover {
+  background-color: darken(var(--secondary-color), 30%);
+}
