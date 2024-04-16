@@ -1,10 +1,11 @@
 /* CSS Variables at root for easy theme management */
 :root {
-  --primary-color: rgb(0, 153, 69); /* Using RGB for green */
-  --secondary-color: hsla(76, 71%, 48%, 0.9); /* Using HSLA for semi-transparent green */
-  --background-color: #f4f4f9; /* Hex code for light grayish background */
-  --text-color: #333; /* Hex code for dark gray text */
-  --header-background: rgba(1, 5, 9, 0.8); /* Using RGBA for semi-transparent dark background */
+  --primary-color-lab: color(lab(53% 80 67)); /* Using lab color space for a vivid green */
+  --secondary-color: hsla(76, 71%, 48%, 0.9); /*  hue, saturation, lightness, alpha values for semi-transparent green */
+  --fallback-color: #009900; /* Fallback standard hex color */
+  --background-color: #f4f4f9; /*  hex code for light grayish background */
+  --text-color: #333; /*  code for dark gray text */
+  --header-background: rgba(1, 5, 9, 0.8); /*  check RGBA for semi-transparent dark background */
 }
 
 /* Applying basic colors and styles for readability */
@@ -16,8 +17,9 @@ body {
 
 /* Header styling with semi-transparent background */
 header {
-  background-color: var(--header-background);
-  color: #FFFFFF; /* Using a color name for white */
+  /*fallback*/
+  background-color: var(--primary-color-lab, var(--fallback-color));
+  color: #FFFFFF; /* Using a hex  for white */
   padding: 20px;
   text-align: center;
 }
@@ -43,11 +45,7 @@ p {
 /* Interactive button styling with transition effects */
 button {
   background-color: var(--secondary-color); /* Applying the semi-transparent HSLA green */
-  color: #090909; /* Hex code for almost black text */
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  color: 'black'; /*color name for  black text */
   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
