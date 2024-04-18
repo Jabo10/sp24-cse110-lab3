@@ -150,7 +150,7 @@ img {
 
 #meetingTitle {
   font-size: 2em; 
-  color: var(--primary-color-lab); /* Uses a vivid green color defined in the root */
+  color: rgb(10, 168, 158); /* Uses a vivid green color defined in the root */
 } 
 
 /* Universal Selector to set box-sizing for all elements */
