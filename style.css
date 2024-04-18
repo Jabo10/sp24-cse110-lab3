@@ -75,7 +75,7 @@ p {
 /* Interactive button styling with transition effects */
 button {
   background-color: var(--secondary-color); /* Applying the semi-transparent HSLA green */
-  color: 'black'; /*color name for  black text */
+  color: black; /*color name for  black text */
   padding: 0.5em; /* Padding relative to the font size of the button */
   margin: 10px;/* Applies to top, right, bottom, left */
   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
@@ -88,12 +88,12 @@ button {
 
 /* Button hover effect to darken the background */
 button:hover {
-  background-color: color-mix(in srgb, var(--secondary-color) 50%, black 50%); /* Mixing current background with black */
+  background-color: hsla(170, 94%, 28%, 0.9); /* */
 }
 /* Button active state effect to provide feedback when clicked */
 button:active {
   transform: scale(0.95); /* Slightly scale down the button to simulate a press */
-  background-color: color-mix(in srgb, var(--secondary-color) 70%, black 30%); /* Darken the background color further when active */
+  background-color: hsla(170, 94%, 18%, 0.9);
 }
 
 .centered {
