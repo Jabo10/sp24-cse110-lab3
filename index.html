@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For responsive design -->
     <title>First Meeting Minutes </title>
     <!-- Link to your external CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Micro+5+Charted&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <!--Trying a cool soccer ball favicon-->
     <link rel="icon" type="image/png" href="favicon_io/favicon-32x32.png">
@@ -12,12 +15,12 @@
   <body>
     <!-- Meeting Title -->
     <header>
-      <h1>First Brainstorm In The Works!</h1>
+      <h1 id="meetingTitle">First Brainstorm In The Works!</h1>
     </header>
 
     <!-- Subtitle Meeting Section/Topic -->
     <section>
-      <h2>Brainstorming Session 1</h2>
+      <h2>Brainstorming Session 1 <span class="highlight">- Important!</span></h2>
       <!--Subtitle of the Date -->
       <p><strong>Date:</strong> April 10, 2024</p>
       <!-- Attendance List -->
@@ -25,8 +28,9 @@
     </section>
 
     <section>
-      <h3>Agenda</h3>
-      <ol>
+      <h3 class="highlight">Agenda </h3>
+      <h4>Key Points</h4> 
+      <ol class="highlight">
         <li>Introdudce ourselves to one another should be easy since its just one of you </li>
         <li>Brainstorm ideas for the project </li>
         <li>Distribute tasks amongst yourself</li>
@@ -73,6 +77,14 @@
       <source src="audioandvideo/IMG_3430.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
+    <article>
+      <h1>Being lazy using the same audio as video</h1>
+      <h2>Maybe close your eyes and imagine </h2>
+      <h3>Sourdough can be eaten breakfast lunch and dinner</h3>
+      <p>
+        If you want to eat with cream cheese I highly recommend it 
+      </p>
+    </article>
   </section>
 
   <!-- Video Recording -->
@@ -82,7 +94,20 @@
       <source src="audioandvideo/IMG_3430.mov" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+     <div class="centered">
+    <!-- Content here will be centered and limited to 1200px max width -->
+    Directions to remember  
+  </div>
+  
+  <div class="container">
+    <!-- Grid layout will apply here -->
+    <div>1. Open bread wrapper </div>
+    <div>2. Seperate two pieces of bread</div>
+    <div>3. Put into toaster and wait</div>
+  </div>
   </section>
+
+ 
 
      <!-- Form for Feedback or Other Purpose -->
      <form>
