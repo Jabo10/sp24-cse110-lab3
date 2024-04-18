@@ -1,13 +1,13 @@
 /* CSS Variables at root for easy theme management */
 :root {
-  --primary-color-lab: color(lab(53% 80 67)); /* Using lab color space for a vivid green */
-  --secondary-color: hsla(170, 94%, 38%, 0.9); /*  hue, saturation, lightness, alpha values for semi-transparent green */
-  --fallback-color: #009900; /* Fallback standard hex color */
-  --background-color: #f4f4f9; /*  hex code for light grayish background */
-  --text-color: #333; /*  code for dark gray text */
-  --header-background: rgba(2, 5, 9, 0.8); /*  check RGBA for semi-transparent dark background */
-  --base-spacing: 10px; /* Define a base spacing unit */
-  font-size: 16px; /* basic 1em = 16px */
+  --primary-color-lab: color(lab(53% 80 67)); 
+  --secondary-color: hsla(170, 94%, 38%, 0.9); 
+  --fallback-color: #009900; 
+  --background-color: #f4f4f9; 
+  --text-color: #333; 
+  --header-background: rgba(2, 5, 9, 0.8); 
+  --base-spacing: 10px; 
+  font-size: 16px; 
 
 }
 
@@ -15,17 +15,17 @@
 body {
   font-family: "Oswald", sans-serif;
   font-size: 2vw;
-  background-color: var(--background-color); /* Applying the light gray background */
-  color: var(--text-color); /* Applying the dark gray text color */
-  margin: 0 auto; /* center align  */
-  max-width: 1200px; /* limit body width to 90% of the viewport width */
+  background-color: var(--background-color); 
+  color: var(--text-color); 
+  margin: 0 auto; 
+  max-width: 1200px; 
 }
 
 /* Header styling with semi-transparent background */
 header {
   /*fallback*/
   background-color: var(--primary-color-lab, var(--fallback-color));
-  color: var(--secondary-color); /* Using a hex  for white */
+  color: var(--secondary-color); 
   padding: 20px;
   text-align: center;
   margin: 20px 10px; /* top & bottom | left & right */
@@ -33,25 +33,25 @@ header {
   width: 100%;
   position: relative;
   display: flex;
-  justify-content: space-between; /* Aligns children to each edge of the header */
-  align-items: center; /* Vertically centers the items */
-  flex-wrap: wrap; /* Allows items to wrap onto the next line if space runs out */
+  justify-content: space-between; 
+  align-items: center; 
+  flex-wrap: wrap; 
   flex-direction: column;
 }
 
 /* Styling headers within sections */
 h1, h2, h3 {
-  color: var(--primary-color); /* Using the RGB green defined above */
-  border-bottom: 1pt solid var(--secondary-color); /* Use points for borders */
+  color: var(--primary-color); 
+  border-bottom: 1pt solid var(--secondary-color); 
   text-decoration: none;
   position: relative; 
 }
 
 /* Section styling using a border color from a CSS variable */
 section {
-  background-color: #FFFFFF; /* Using hex code for white */
-  border: 2px solid var(--secondary-color); /* Applying the semi-transparent HSLA green */
-  margin: 2em 0; /* Spacing relative to font size */
+  background-color: #FFFFFF; 
+  border: 2px solid var(--secondary-color); 
+  margin: 2em 0; 
   padding-top: 10px;
   padding-right: 5px;
   padding-bottom: 10px;
@@ -67,18 +67,18 @@ section {
 
 /* Paragraph styling with HSLA for semi-transparency */
 p {
-  color: hsla(0, 0%, 0%, 0.8); /* Black with 80% opacity, allowing some background to show through */
-  font-size: 1.25em; /* Font size relative to the base font size */
+  color: hsla(0, 0%, 0%, 0.8); 
+  font-size: 1.25em; 
 
 }
 
 /* Interactive button styling with transition effects */
 button {
-  background-color: var(--secondary-color); /* Applying the semi-transparent HSLA green */
-  color: black; /*color name for  black text */
-  padding: 0.5em; /* Padding relative to the font size of the button */
-  margin: 10px;/* Applies to top, right, bottom, left */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  background-color: var(--secondary-color); 
+  color: black; 
+  padding: 0.5em; 
+  margin: 10px;
+  transition: background-color 0.3s ease; 
   border-radius: 8px;
   text-decoration: underline;
   display: inline-block;
@@ -92,54 +92,54 @@ button:hover {
 }
 /* Button active state effect to provide feedback when clicked */
 button:active {
-  transform: scale(0.95); /* Slightly scale down the button to simulate a press */
+  transform: scale(0.95);
   background-color: hsla(170, 94%, 18%, 0.9);
 }
 
 .centered {
   max-width: 1200px;
-  width: 100%; /* Necessary for auto margins to work for centering */
-  margin: 0 auto; /* Top & bottom margins are 0, left & right margins are auto */
+  width: 100%; 
+  margin: 0 auto; 
 }
 img {
-  max-width: 100%; /* Makes images responsive, scaling down within their container */
-  height: auto; /* Keeps the image aspect ratio intact */
+  max-width: 100%;
+  height: auto; 
 }
 
 .container {
   display: grid;
   grid-template-columns:  1fr;
-  grid-gap: 20px; /* Sets the gap between rows and columns */
-  justify-items: center; /* Horizontally centers items within their cells */
+  grid-gap: 20px;
+  justify-items: center; 
 }
 
 /*  tablets 768px */
 @media (min-width: 768px) {
   .container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   header {
-    flex-direction: row; /* Horizontal layout for larger screens */
-    justify-content: space-between; /* Spread items out across the header */
+    flex-direction: row; 
+    justify-content: space-between; 
   }
 }
 
 /*  desktops wider than 1024px */
 @media (min-width: 1024px) {
   .container {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+    grid-template-columns: repeat(3, 1fr); 
   }
 
   body {
-    max-width: 1200px; /* Cap max width for very large screens */
+    max-width: 1200px; 
   }
 }
 
 /* very large screens */
 @media (min-width: 1200px) {
   header {
-    padding: 20px 40px; /* More padding on larger screens */
+    padding: 20px 40px; 
   }
 }
 
@@ -150,8 +150,7 @@ img {
 
 #meetingTitle {
   font-size: 2em; 
-  /*color: rgb(10, 168, 158) */
-  color:rgba(2, 5, 9, 0.8)
+  color: rgb(10, 168, 158) 
 } 
 
 /* Universal Selector to set box-sizing for all elements */
@@ -166,23 +165,23 @@ input[type="text"] {
 }
 
 section p {
-  color: darkblue; /* Styles all <p> inside <section> regardless of nesting level */
+  color: darkblue; 
 }
 
 section > ol > li {
-  list-style-type: square; /* Only affects <li> that are direct children of <ol> inside <section> */
+  list-style-type: square; 
 }
 
 h2 ~ h3 {
-  margin-top: 20px; /* Affects all <h3> that are siblings of <h2>, following <h2> */
+  margin-top: 20px; 
 }
 
 h2 + p {
-  font-weight: bold; /* Only affects a <p> that immediately follows an <h2> */
+  font-weight: bold; 
 }
 
 h3.highlight {
-  background-color: var(--secondary-color); /* Styles <h2> elements with class 'highlight' */
+  background-color: var(--secondary-color); 
 }
 
 
@@ -191,6 +190,6 @@ h1:has(+ h2) {
 }
 
 ol.highlight > li {
-  color: navy; /* This will override the gold color */
+  color: navy; 
   font-style: italic;
 }
