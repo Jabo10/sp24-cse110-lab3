@@ -150,7 +150,8 @@ img {
 
 #meetingTitle {
   font-size: 2em; 
-  color: rgb(10, 168, 158)
+  /*color: rgb(10, 168, 158) */
+  color:rgba(2, 5, 9, 0.8)
 } 
 
 /* Universal Selector to set box-sizing for all elements */
